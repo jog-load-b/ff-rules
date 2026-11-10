@@ -5,7 +5,7 @@ on:
 permissions: {}
 jobs:
   build:
-    if: github.event.action != 'labeled'
+    if: github.event.action == 'labeled'
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
