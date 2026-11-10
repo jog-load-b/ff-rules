@@ -1,0 +1,12 @@
+name: q
+on:
+  pull_request:
+    types: [opened, synchronize, labeled]
+permissions: {}
+jobs:
+  build:
+    if: github.event.action != 'labeled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - run: exit 1
