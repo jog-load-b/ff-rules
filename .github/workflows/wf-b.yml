@@ -1,0 +1,11 @@
+name: wf-b
+on:
+  pull_request:
+    types: [labeled]
+permissions: {}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - run: exit 0
